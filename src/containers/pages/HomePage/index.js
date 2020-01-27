@@ -21,7 +21,7 @@ class HomePage extends Component {
                     {/* menu  */}
                     <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
                         {/* image slider  */}
-                        <View style={{ height: 200, backgroundColor: 'red' }}>
+                        <View style={{ height: 200 }}>
                             <Image source={require('../../../assets/img/pu2.png')} style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} />
                         </View>
                         {/* menu bar  */}

@@ -7,7 +7,7 @@ class CartPage extends Component {
             <View style={{ flex: 1 }}>
                 {/* konten  */}
                 <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
-                    <View style={{ height: 50, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                    <View style={{ height: 50, justifyContent: 'center', alignItems: 'center' }}>
                         <Text style={{ fontWeight: 'bold', fontSize: 20 }}>KERANJANG PAGE</Text>
                     </View>
                     <ScrollView>
@@ -68,6 +68,19 @@ class CartPage extends Component {
                             <View style={{ width: 100, justifyContent: 'center', alignItems: 'center' }}>
                                 <TouchableOpacity style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>
                                     <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>HAPUS</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={{ height: 60, backgroundColor: 'white', flexDirection: 'row', marginVertical: 10, }}>
+                            <View style={{ flex: 1,justifyContent:'center',alignItems:'center' }}>
+                                <Text style={{fontWeight:'bold',fontSize:15}}>TOTAL</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent:'center',alignItems:'center' }}>
+                            <Text style={{fontWeight:'bold',fontSize:15}}>RP 120.000</Text>
+                            </View>
+                            <View style={{ width: 130, justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ padding: 10, backgroundColor: 'green', borderRadius: 10 }}>
+                                    <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>CHECKOUT</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
