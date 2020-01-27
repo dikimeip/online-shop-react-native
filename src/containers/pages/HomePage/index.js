@@ -24,15 +24,55 @@ class HomePage extends Component {
                         <Image source={require('../../../assets/img/pu2.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
                     </View>
                     {/* menu bar  */}
-                    <View style={{height:170,flexDirection:'row',flexWrap:'wrap',marginVertical:10,}}>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'red'}}></View>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'blue'}}></View>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'green'}}></View>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'yellow'}}></View>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'yellow'}}></View>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'white'}}></View>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'black'}}></View>
-                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'red'}}></View>
+                    <View style={{height:170,flexDirection:'row',flexWrap:'wrap',marginVertical:10,backgroundColor:'white'}}>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/pria.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>PRIA</Text>
+                        </View>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/wanita.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>WANITA</Text>
+                        </View>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/muslimah.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>MUSLIMAH</Text>
+                        </View>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/anak.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>ANAK</Text>
+                        </View>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/jaket.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>JAKET</Text>
+                        </View>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/sepatu.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>SEPATU</Text>
+                        </View>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/tas.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>TAS</Text>
+                        </View>
+                        <View style={{width:`${100/4}%`,height:80,justifyContent:'center',alignItems:'center'}}>
+                            <View style={{width:40,height:40}}>
+                                <Image source={require('../../../assets/icon/aksesoris.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                            </View>
+                            <Text style={{marginTop:5,fontWeight:'bold'}}>AKSESORIS</Text>
+                        </View>
                     </View>
                 </View>
                 {/* footer  */}
