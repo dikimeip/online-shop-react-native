@@ -1,5 +1,5 @@
 APLIKASI ONLINE SHOP MENGUNAKAN 
-    -REACT NATIIVE(Mobile)
+    -REACT NATIVE(Mobile)
     -REACT JS(Server)
     -Laravel (RestServer)
     -MySql(Database)

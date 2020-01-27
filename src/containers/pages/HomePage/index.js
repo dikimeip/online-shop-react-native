@@ -23,6 +23,17 @@ class HomePage extends Component {
                     <View style={{height:200,backgroundColor:'red'}}>
                         <Image source={require('../../../assets/img/pu2.png')} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
                     </View>
+                    {/* menu bar  */}
+                    <View style={{height:170,flexDirection:'row',flexWrap:'wrap',marginVertical:10,}}>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'red'}}></View>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'blue'}}></View>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'green'}}></View>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'yellow'}}></View>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'yellow'}}></View>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'white'}}></View>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'black'}}></View>
+                        <View style={{width:`${100/4}%`,height:80,backgroundColor:'red'}}></View>
+                    </View>
                 </View>
                 {/* footer  */}
                 <View style={{ height: 65, backgroundColor: 'white', flexDirection: 'row' }}>
