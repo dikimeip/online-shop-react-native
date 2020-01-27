@@ -192,7 +192,7 @@ class HomePage extends Component {
                 </ScrollView>
                 {/* footer  */}
                 <View style={{ height: 65, backgroundColor: 'white', flexDirection: 'row' }}>
-                    <TouchableOpacity style={{ flex: 1 }}>
+                    <TouchableOpacity style={{ flex: 1 }} onPress={() => this.props.navigation.navigate('HomePages')} >
                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <View style={{ width: 30, height: 30 }}>
                                 <Image source={require('../../../assets/icon/home.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
@@ -200,7 +200,7 @@ class HomePage extends Component {
                             <Text style={{ fontWeight: 'bold', marginTop: 5, }}>HOME</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ flex: 1 }}>
+                    <TouchableOpacity style={{ flex: 1 }} onPress={() => this.props.navigation.navigate('CartPages')}>
                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <View style={{ width: 30, height: 30 }}>
                                 <Image source={require('../../../assets/icon/cart.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
