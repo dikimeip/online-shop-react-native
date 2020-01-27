@@ -77,42 +77,119 @@ class HomePage extends Component {
                         </View>
                         {/* produk diskon  */}
                         <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, }}>
-                            <View style={{flexDirection:'row',justifyContent:'space-between',marginTop: 10,}}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15 }}>DISKON PRODUK</Text>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
                             </View>
-                            <View style={{height:'100%',marginTop: 10,flexDirection:'row'}}>
+                            <View style={{ height: '85%', marginTop: 10, flexDirection: 'row' }}>
                                 <ScrollView horizontal>
-                                <View style={{width:150,height:'100%',borderWidth:1,borderColor:'grey',marginLeft:10}}>
-                                    <Image source={require('../../../assets/img/p1.jpg')} style={{width:'100%',marginTop: 3,height:'55%',resizeMode:'stretch'}} />
-                                    <Text style={{fontWeight:'bold',textAlign:'center',marginTop: 5,}}>BAJU SABLON KUALITAS BISA DIUJI</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',color:'red',textDecorationLine:'line-through'}}>Rp 100.000</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',}}>Rp 100.000</Text>
-                                </View>
-                                <View style={{width:150,height:'100%',borderWidth:1,borderColor:'grey',marginLeft:10}}>
-                                    <Image source={require('../../../assets/img/p1.jpg')} style={{width:'100%',marginTop: 3,height:'55%',resizeMode:'stretch'}} />
-                                    <Text style={{fontWeight:'bold',textAlign:'center',marginTop: 5,}}>BAJU SABLON KUALITAS BISA DIUJI</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',color:'red',textDecorationLine:'line-through'}}>Rp 100.000</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',}}>Rp 100.000</Text>
-                                </View>
-                                <View style={{width:150,height:'100%',borderWidth:1,borderColor:'grey',marginLeft:10}}>
-                                    <Image source={require('../../../assets/img/p1.jpg')} style={{width:'100%',marginTop: 3,height:'55%',resizeMode:'stretch'}} />
-                                    <Text style={{fontWeight:'bold',textAlign:'center',marginTop: 5,}}>BAJU SABLON KUALITAS BISA DIUJI</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',color:'red',textDecorationLine:'line-through'}}>Rp 100.000</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',}}>Rp 100.000</Text>
-                                </View>
-                                <View style={{width:150,height:'100%',borderWidth:1,borderColor:'grey',marginLeft:10}}>
-                                    <Image source={require('../../../assets/img/p1.jpg')} style={{width:'100%',marginTop: 3,height:'55%',resizeMode:'stretch'}} />
-                                    <Text style={{fontWeight:'bold',textAlign:'center',marginTop: 5,}}>BAJU SABLON KUALITAS BISA DIUJI</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',color:'red',textDecorationLine:'line-through'}}>Rp 100.000</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',}}>Rp 100.000</Text>
-                                </View>
-                                <View style={{width:150,height:'100%',borderWidth:1,borderColor:'grey',marginLeft:10}}>
-                                    <Image source={require('../../../assets/img/p1.jpg')} style={{width:'100%',marginTop: 3,height:'55%',resizeMode:'stretch'}} />
-                                    <Text style={{fontWeight:'bold',textAlign:'center',marginTop: 5,}}>BAJU SABLON KUALITAS BISA DIUJI</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',color:'red',textDecorationLine:'line-through'}}>Rp 100.000</Text>
-                                    <Text style={{fontWeight:'bold',textAlign:'center',}}>Rp 100.000</Text>
-                                </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                </ScrollView>
+                            </View>
+                        </View>
+                        {/* new produk  */}
+                        <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, marginVertical: 10,}}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
+                                <Text style={{ fontWeight: 'bold', fontSize: 15 }}>DISKON PRODUK</Text>
+                                <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
+                            </View>
+                            <View style={{ height: '85%', marginTop: 10, flexDirection: 'row' }}>
+                                <ScrollView horizontal>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '60%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 5, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', color: 'red', textDecorationLine: 'line-through' }}>Rp 100.000</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                </ScrollView>
+                            </View>
+                        </View>
+                        {/* hot produk  */}
+                        <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15,marginBottom:  10, }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
+                                <Text style={{ fontWeight: 'bold', fontSize: 15 }}>HOT PRODUK</Text>
+                                <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
+                            </View>
+                            <View style={{ height: '85%', marginTop: 10, flexDirection: 'row' }}>
+                                <ScrollView horizontal>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '65%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 15, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '65%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 15, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '65%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 15, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '65%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 15, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
+                                    <View style={{ width: 150, height: '100%', borderWidth: 1, borderColor: 'grey', marginLeft: 10 }}>
+                                        <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', marginTop: 3, height: '65%', resizeMode: 'stretch' }} />
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 15, }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>Rp 100.000</Text>
+                                    </View>
                                 </ScrollView>
                             </View>
                         </View>
