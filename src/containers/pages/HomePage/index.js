@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, Image, ScrollView } from 'react-native'
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 
 class HomePage extends Component {
@@ -117,7 +117,7 @@ class HomePage extends Component {
                             </View>
                         </View>
                         {/* new produk  */}
-                        <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, marginVertical: 10,}}>
+                        <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, marginVertical: 10, }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15 }}>NEW PRODUK</Text>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
@@ -153,7 +153,7 @@ class HomePage extends Component {
                             </View>
                         </View>
                         {/* hot produk  */}
-                        <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15,marginBottom:  10, }}>
+                        <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, marginBottom: 10, }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15 }}>HOT PRODUK</Text>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
@@ -192,30 +192,38 @@ class HomePage extends Component {
                 </ScrollView>
                 {/* footer  */}
                 <View style={{ height: 65, backgroundColor: 'white', flexDirection: 'row' }}>
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <View style={{ width: 30, height: 30 }}>
-                            <Image source={require('../../../assets/icon/home.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                    <TouchableOpacity style={{ flex: 1 }}>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <View style={{ width: 30, height: 30 }}>
+                                <Image source={require('../../../assets/icon/home.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                            </View>
+                            <Text style={{ fontWeight: 'bold', marginTop: 5, }}>HOME</Text>
                         </View>
-                        <Text style={{ fontWeight: 'bold', marginTop: 5, }}>HOME</Text>
-                    </View>
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <View style={{ width: 30, height: 30 }}>
-                            <Image source={require('../../../assets/icon/cart.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{ flex: 1 }}>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <View style={{ width: 30, height: 30 }}>
+                                <Image source={require('../../../assets/icon/cart.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                            </View>
+                            <Text style={{ fontWeight: 'bold', marginTop: 5, }}>CART</Text>
                         </View>
-                        <Text style={{ fontWeight: 'bold', marginTop: 5, }}>CART</Text>
-                    </View>
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <View style={{ width: 30, height: 30 }}>
-                            <Image source={require('../../../assets/icon/riwayat.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{flex:1}}>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <View style={{ width: 30, height: 30 }}>
+                                <Image source={require('../../../assets/icon/riwayat.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                            </View>
+                            <Text style={{ fontWeight: 'bold', marginTop: 5, }}>HISTORY</Text>
                         </View>
-                        <Text style={{ fontWeight: 'bold', marginTop: 5, }}>HISTORY</Text>
-                    </View>
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <View style={{ width: 30, height: 30 }}>
-                            <Image source={require('../../../assets/icon/account.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{flex:1}}>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <View style={{ width: 30, height: 30 }}>
+                                <Image source={require('../../../assets/icon/account.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
+                            </View>
+                            <Text style={{ fontWeight: 'bold', marginTop: 5, }}>ACCOUNT</Text>
                         </View>
-                        <Text style={{ fontWeight: 'bold', marginTop: 5, }}>ACCOUNT</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         )
