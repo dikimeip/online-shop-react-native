@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text,TouchableOpacity,Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
 
 class CartPage extends Component {
     render() {
@@ -7,9 +7,71 @@ class CartPage extends Component {
             <View style={{ flex: 1 }}>
                 {/* konten  */}
                 <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
-                    <View style={{height:50,backgroundColor:'white',justifyContent:'center',alignItems:'center'}}>
-                        <Text style={{fontWeight:'bold',fontSize:20}}>KERANJANG PAGE</Text>
+                    <View style={{ height: 50, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontWeight: 'bold', fontSize: 20 }}>KERANJANG PAGE</Text>
                     </View>
+                    <ScrollView>
+                        <View style={{ height: 150, backgroundColor: 'white', marginVertical: 5, flexDirection: 'row', }}>
+                            <View style={{ width: 150 }}>
+                                <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} />
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', fontSize: 15 }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 10, }}>JUMLAH PEMBELIAN 5 </Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>TOTAL RP 150.000</Text>
+                            </View>
+                            <View style={{ width: 100, justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>
+                                    <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>HAPUS</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={{ height: 150, backgroundColor: 'white', marginVertical: 5, flexDirection: 'row', }}>
+                            <View style={{ width: 150 }}>
+                                <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} />
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', fontSize: 15 }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 10, }}>JUMLAH PEMBELIAN 5 </Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>TOTAL RP 150.000</Text>
+                            </View>
+                            <View style={{ width: 100, justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>
+                                    <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>HAPUS</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={{ height: 150, backgroundColor: 'white', marginVertical: 5, flexDirection: 'row', }}>
+                            <View style={{ width: 150 }}>
+                                <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} />
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', fontSize: 15 }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 10, }}>JUMLAH PEMBELIAN 5 </Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>TOTAL RP 150.000</Text>
+                            </View>
+                            <View style={{ width: 100, justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>
+                                    <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>HAPUS</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={{ height: 150, backgroundColor: 'white', marginVertical: 5, flexDirection: 'row', }}>
+                            <View style={{ width: 150 }}>
+                                <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} />
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', fontSize: 15 }}>BAJU SABLON KUALITAS BISA DIUJI</Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 10, }}>JUMLAH PEMBELIAN 5 </Text>
+                                <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>TOTAL RP 150.000</Text>
+                            </View>
+                            <View style={{ width: 100, justifyContent: 'center', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>
+                                    <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>HAPUS</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </ScrollView>
                 </View>
                 {/* navbar  */}
                 <View style={{ height: 65, backgroundColor: 'white', flexDirection: 'row' }}>
