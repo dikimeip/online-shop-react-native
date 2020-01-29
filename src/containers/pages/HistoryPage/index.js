@@ -11,15 +11,15 @@ class HistoryPage extends Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* header  */}
-                <HeaderHistory/>
+                <HeaderHistory />
                 {/* home  */}
                 <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
-                   <HeaderJudul/>
-                   {/* history list  */}
-                   <HistoryProduk/>
+                    <HeaderJudul />
+                    {/* history list  */}
+                    <HistoryProduk />
                 </View>
                 {/* navbaar  */}
-                    <Navbar/>
+                <Navbar />
             </View>
         )
     }
