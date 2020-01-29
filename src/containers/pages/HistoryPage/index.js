@@ -99,7 +99,7 @@ class HistoryPage extends Component {
                             <Text style={{ fontWeight: 'bold', marginTop: 5, }}>HISTORY</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ flex: 1 }} onPress={() => this.props.navigation.navigate('CartPages')} >
+                    <TouchableOpacity style={{ flex: 1 }} onPress={() => this.props.navigation.navigate('AccountPages')} >
                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <View style={{ width: 30, height: 30 }}>
                                 <Image source={require('../../../assets/icon/account.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />

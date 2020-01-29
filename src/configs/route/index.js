@@ -3,6 +3,7 @@ import HomePage from "../../containers/pages/HomePage";
 import CartPage from "../../containers/pages/CartPage";
 import { createSwitchNavigator,createAppContainer } from "react-navigation";
 import HistoryPage from "../../containers/pages/HistoryPage";
+import AccountPage from "../../containers/pages/AccountPage";
 
 const HomePages = createStackNavigator(
     {
@@ -40,11 +41,24 @@ const HistoryPages = createStackNavigator(
     }
 )
 
+const AccountPages = createStackNavigator(
+    {
+        HomeAccount : {
+            screen:AccountPage
+        }
+    },
+    {
+        headerMode:'none',
+        initialRouteName:'HomeAccount'
+    }
+)
+
 const Routers = createSwitchNavigator(
     {
         HomePages,
         CartPages,
-        HistoryPages
+        HistoryPages,
+        AccountPages
     },
     {
         initialRouteName:'HomePages'
