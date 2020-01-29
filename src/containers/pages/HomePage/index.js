@@ -208,7 +208,7 @@ class HomePage extends Component {
                             <Text style={{ fontWeight: 'bold', marginTop: 5, }}>CART</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{flex:1}}>
+                    <TouchableOpacity style={{flex:1}} onPress={() => this.props.navigation.navigate('HistoryPages')} >
                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <View style={{ width: 30, height: 30 }}>
                                 <Image source={require('../../../assets/icon/riwayat.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
@@ -216,7 +216,7 @@ class HomePage extends Component {
                             <Text style={{ fontWeight: 'bold', marginTop: 5, }}>HISTORY</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{flex:1}}>
+                    <TouchableOpacity style={{flex:1}} onPress={() => this.props.navigation.navigate('CartPages')} >
                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <View style={{ width: 30, height: 30 }}>
                                 <Image source={require('../../../assets/icon/account.png')} style={{ width: '100%', height: '100%', marginTop: 4 }} />
