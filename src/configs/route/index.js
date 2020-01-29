@@ -5,11 +5,15 @@ import { createSwitchNavigator,createAppContainer } from "react-navigation";
 import HistoryPage from "../../containers/pages/HistoryPage";
 import AccountPage from "../../containers/pages/AccountPage";
 import LoginPage from "../../containers/pages/LoginPage";
+import ProdukPage from "../../containers/pages/ProdukPage";
 
 const HomePages = createStackNavigator(
     {
         dasboard : {
             screen : HomePage
+        },
+        produkPages : {
+            screen:ProdukPage
         }
     },
     {
