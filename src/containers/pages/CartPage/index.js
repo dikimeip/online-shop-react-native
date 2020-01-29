@@ -7,11 +7,11 @@ class CartPage extends Component {
             <View style={{ flex: 1 }}>
                 {/* konten  */}
                 <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
-                    <View style={{ height: 50, justifyContent: 'center', alignItems: 'center' }}>
+                    <View style={{ height: 40, justifyContent: 'center', alignItems: 'center',backgroundColor:'white' }}>
                         <Text style={{ fontWeight: 'bold', fontSize: 20 }}>KERANJANG PAGE</Text>
                     </View>
                     <ScrollView>
-                        <View style={{ height: 150, backgroundColor: 'white', marginVertical: 5, flexDirection: 'row', }}>
+                        <View style={{ height: 150, backgroundColor: 'white', marginVertical: 10, flexDirection: 'row', }}>
                             <View style={{ width: 150 }}>
                                 <Image source={require('../../../assets/img/p1.jpg')} style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} />
                             </View>
