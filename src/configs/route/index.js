@@ -4,6 +4,7 @@ import CartPage from "../../containers/pages/CartPage";
 import { createSwitchNavigator,createAppContainer } from "react-navigation";
 import HistoryPage from "../../containers/pages/HistoryPage";
 import AccountPage from "../../containers/pages/AccountPage";
+import LoginPage from "../../containers/pages/LoginPage";
 
 const HomePages = createStackNavigator(
     {
@@ -53,12 +54,25 @@ const AccountPages = createStackNavigator(
     }
 )
 
+const LoginPages = createStackNavigator(
+    {
+        Dasboard:{
+            screen:LoginPage
+        }
+    },
+    {
+        headerMode:'none',
+        initialRouteName:'Dasboard'
+    }
+)
+
 const Routers = createSwitchNavigator(
     {
         HomePages,
         CartPages,
         HistoryPages,
-        AccountPages
+        AccountPages,
+        LoginPages
     },
     {
         initialRouteName:'HomePages'
