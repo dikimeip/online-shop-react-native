@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text,TouchableOpacity,Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
 
 class HistoryPage extends Component {
 
@@ -7,9 +7,72 @@ class HistoryPage extends Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* header  */}
-                <View style={{ height: 70, backgroundColor: 'blue' }}></View>
+                <View style={{ height: 40, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 20 }}>HISTORY PAGE</Text>
+                </View>
                 {/* home  */}
-                <View style={{ flex: 1, backgroundColor: 'red' }}></View>
+                <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
+                    <View style={{ height: 30, backgroundColor: "white", paddingHorizontal: 20, marginVertical: 10, flexDirection: 'row' }}>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 16 }}>PRODUK</Text>
+                        </View>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 16 }}>STATUS</Text>
+                        </View>
+                    </View>
+                    <ScrollView>
+                        <View style={{ height: 100, backgroundColor: "white", paddingHorizontal: 20, marginVertical: 10, flexDirection: 'row' }}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 15 }}>BAJU KOKOH MUSLIMAT NU</Text>
+                                <Text style={{ fontSize: 15 }}>Rp 150.000</Text>
+                                <Text style={{ fontSize: 15 }}>INVOICE RD12132133</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 15 }}>BELUM DIBAYAR</Text>
+                            </View>
+                        </View>
+                        <View style={{ height: 100, backgroundColor: "white", paddingHorizontal: 20, marginVertical: 10, flexDirection: 'row' }}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 15 }}>BAJU KOKOH MUSLIMAT NU</Text>
+                                <Text style={{ fontSize: 15 }}>Rp 150.000</Text>
+                                <Text style={{ fontSize: 15 }}>INVOICE RD12132133</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 15 }}>BELUM DIBAYAR</Text>
+                            </View>
+                        </View>
+                        <View style={{ height: 100, backgroundColor: "white", paddingHorizontal: 20, marginVertical: 10, flexDirection: 'row' }}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 15 }}>BAJU KOKOH MUSLIMAT NU</Text>
+                                <Text style={{ fontSize: 15 }}>Rp 150.000</Text>
+                                <Text style={{ fontSize: 15 }}>INVOICE RD12132133</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 15 }}>BELUM DIBAYAR</Text>
+                            </View>
+                        </View>
+                        <View style={{ height: 100, backgroundColor: "white", paddingHorizontal: 20, marginVertical: 10, flexDirection: 'row' }}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 15 }}>BAJU KOKOH MUSLIMAT NU</Text>
+                                <Text style={{ fontSize: 15 }}>Rp 150.000</Text>
+                                <Text style={{ fontSize: 15 }}>INVOICE RD12132133</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 15 }}>BELUM DIBAYAR</Text>
+                            </View>
+                        </View>
+                        <View style={{ height: 100, backgroundColor: "white", paddingHorizontal: 20, marginVertical: 10, flexDirection: 'row' }}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 15 }}>BAJU KOKOH MUSLIMAT NU</Text>
+                                <Text style={{ fontSize: 15 }}>Rp 150.000</Text>
+                                <Text style={{ fontSize: 15 }}>INVOICE RD12132133</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 15 }}>BELUM DIBAYAR</Text>
+                            </View>
+                        </View>
+                    </ScrollView>
+                </View>
                 {/* navbaar  */}
                 <View style={{ height: 65, backgroundColor: 'white', flexDirection: 'row' }}>
                     <TouchableOpacity style={{ flex: 1 }} onPress={() => this.props.navigation.navigate('HomePages')} >
