@@ -1,15 +1,33 @@
 import React, { Component } from 'react';
-import { View, Text,TouchableOpacity,Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
 
 
 class AccountPage extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <View style={{ height: 40, backgroundColor: 'white',justifyContent:'center',alignItems:'center' }}>
-                <Text style={{ fontWeight: 'bold', fontSize: 20 }}>ACCOUNT PAGE</Text>
+                <View style={{ height: 40, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 20 }}>ACCOUNT PAGE</Text>
                 </View>
-                <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}></View>
+                <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
+                    <ScrollView>
+                        <View style={{ height: 400,backgroundColor:'white',margin:10,justifyContent:'center' }}>
+                            <View style={{height:100,alignItems:'center'}}>
+                                <Image source={require('../../../assets/img/user.png')} style={{width:'20%',height:'100%'}} />
+                            </View>
+                            <View style={{marginTop:20,marginHorizontal:20}}>
+                                <Text style={{fontSize:20,fontWeight:'bold',marginTop:10}}>USERNAME</Text>
+                                <Text style={{fontSize:20}}>CAP CAPUNG</Text>
+                                <Text style={{fontSize:20,fontWeight:'bold',marginTop:10}}>EMAIL</Text>
+                                <Text style={{fontSize:20}}>CAP CAPUNG</Text>
+                                <Text style={{fontSize:20,fontWeight:'bold',marginTop:10}}>NO TELPON</Text>
+                                <Text style={{fontSize:20}}>CAP CAPUNG</Text>
+                                <Text style={{fontSize:20,fontWeight:'bold',marginTop:10}}>ALAMAT</Text>
+                                <Text style={{fontSize:20}}>CAP CAPUNG</Text>
+                            </View>
+                        </View>
+                    </ScrollView>
+                </View>
                 <View style={{ height: 65, backgroundColor: 'red' }}>
                     <View style={{ height: 65, backgroundColor: 'white', flexDirection: 'row' }}>
                         <TouchableOpacity style={{ flex: 1 }} onPress={() => this.props.navigation.navigate('HomePages')} >
