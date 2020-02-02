@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProdukList from '../../../components/moleculs/ProdukList';
-import { View,Text,ScrollView } from 'react-native';
+import { View,Text,ScrollView, FlatList } from 'react-native';
 import API from '../../../configs/axios';
 
 class NewProduk extends Component {
@@ -14,11 +14,18 @@ class NewProduk extends Component {
 
     componentDidMount=() => {
         API.GetAllProduk().then(res => {
-            console.log(res)
+            this.setState({
+                produk:res.value
+            })
         }).catch(err => {
             console.log(err)
         })
     }
+
+    keyExtractor = (item,index) => index.toString()
+    renderItem = ({item}) => (
+        <ProdukList foto={{ uri: this.state.url + item.image_produk }} judul={item.nama_produk} harga={item.harga} />
+    ) 
 
     render() {
         return (
@@ -28,7 +35,12 @@ class NewProduk extends Component {
                     <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
                 </View>
                 <View style={{ height: '85%', marginTop: 10, flexDirection: 'row' }}>
-                   
+                   <FlatList 
+                    horizontal={true}
+                    data = {this.state.produk}
+                    keyExtractor={this.keyExtractor}
+                    renderItem = {this.renderItem}
+                   />
                 </View>
             </View>
         )
