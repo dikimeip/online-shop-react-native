@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
 import ProdukList from '../../../components/moleculs/ProdukList';
 import { View,Text,ScrollView } from 'react-native';
+import API from '../../../configs/axios';
 
 class NewProduk extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            produk : [],
+            url : "http://192.168.43.230/server_dc-shop/assets/img/"
+        }
+    }
+
+    componentDidMount=() => {
+        API.GetAllProduk().then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
     render() {
         return (
             <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, marginVertical: 10, }}>
@@ -11,12 +28,7 @@ class NewProduk extends Component {
                     <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
                 </View>
                 <View style={{ height: '85%', marginTop: 10, flexDirection: 'row' }}>
-                    <ScrollView horizontal>
-                    <ProdukList foto={require('../../../assets/img/p1.jpg')} judul="Baju Sablon Dengan kualitas terbaru" harga="Rp 100.000" />
-                    <ProdukList foto={require('../../../assets/img/p1.jpg')} judul="Baju Sablon Dengan kualitas terbaru" harga="Rp 100.000" />
-                    <ProdukList foto={require('../../../assets/img/p1.jpg')} judul="Baju Sablon Dengan kualitas terbaru" harga="Rp 100.000" />
-                    <ProdukList foto={require('../../../assets/img/p1.jpg')} judul="Baju Sablon Dengan kualitas terbaru" harga="Rp 100.000" />
-                    </ScrollView>
+                   
                 </View>
             </View>
         )

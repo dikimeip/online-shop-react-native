@@ -25,10 +25,13 @@ const GET_ID = (path) => {
 
 const PostLogin = (data) => POST('LoginController',data)
 const GetHotProduk = () => GET_ID('ProdukAll?id=HOTPRODUK')
+const GetAllProduk = () => GET_ID('ProdukAll?id=NEWPRODUK')
+
 
 const API = {
     PostLogin,
     GetHotProduk,
+    GetAllProduk
 }
 
 export default API
