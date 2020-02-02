@@ -13,7 +13,7 @@ const POST = (path,data) => {
 }
 
 const GET_ID = (path) => {
-    const promise = new Promise((reject,resolve) => {
+    const promise = new Promise((resolve,reject) => {
         Axios.get(RootPath+path).then(res => {
             resolve(res.data)
         }).catch(err => {

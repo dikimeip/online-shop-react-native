@@ -79,7 +79,7 @@ const Routers = createSwitchNavigator(
         LoginPages
     },
     {
-        initialRouteName:'LoginPages'
+        initialRouteName:'HomePages'
     }
 )
 
