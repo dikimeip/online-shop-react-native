@@ -1,12 +1,12 @@
 import Axios from "axios";
 
-const RootPath = "http://localhost/server_dc-shop/api/";
+const RootPath = "http:/192.168.43.230/server_dc-shop/api/";
 const POST = (path,data) => {
-    const promise = new Promise((res, rej) => {
+    const promise = new Promise((resolve, reject) => {
         Axios.post(RootPath+path,data).then(res => {
-            res(res.data)
+            resolve(res.data)
         }).catch(err => {
-            rej(err)
+            reject(err)
         })
     })
     return promise
