@@ -7,6 +7,7 @@ import AccountPage from "../../containers/pages/AccountPage";
 import LoginPage from "../../containers/pages/LoginPage";
 import ProdukPage from "../../containers/pages/ProdukPage";
 import PriaPage from "../../containers/pages/PriaPage";
+import WanitaPage from "../../containers/pages/WanitaPage";
 
 const HomePages = createStackNavigator(
     {
@@ -18,6 +19,9 @@ const HomePages = createStackNavigator(
         },
         PriaPages : {
             screen : PriaPage
+        },
+        WanitaPages : {
+            screen:WanitaPage
         }
     },
     {

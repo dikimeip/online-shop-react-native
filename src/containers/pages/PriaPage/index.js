@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Image } from 'react-native'
+import { View } from 'react-native'
 import Navbar from '../../organism/Navbar'
 import HeaderPria from '../../organism/HeaderPria';
 import PriaProduk from '../../organism/PriaProduk'
