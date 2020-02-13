@@ -26,11 +26,6 @@ class PriaProduk extends Component {
 
     render() {
         const produk = this.state.produk.map(pro => (
-            // <View key={pro.id_produk} style={{ width: `${93 / 3}%`, height: 250, borderWidth: 1, borderColor: 'grey', marginLeft: 10, marginVertical: 10 }}>
-            //     <Image source={{ uri: this.state.url + pro.image_produk }} style={{ width: '100%', marginTop: 3, height: '65%', resizeMode: 'stretch' }} />
-            //     <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 15, }}>{pro.nama_produk}</Text>
-            //     <Text style={{ fontWeight: 'bold', textAlign: 'center', }}> {pro.harga} </Text>
-            // </View>
             <ProdukItem key={pro.id_produk} image={{uri : this.state.url + pro.image_produk}} nama={pro.nama_produk} harga={pro.harga} />
         ))
         return (
