@@ -12,6 +12,7 @@ import AnakPage from "../../containers/pages/AnakPage";
 import MuslimahPage from "../../containers/pages/MuslimahPage";
 import TasPage from "../../containers/pages/TasPage";
 import JaketPage from "../../containers/pages/JaketPage";
+import SepatuPage from "../../containers/pages/SepatuPage";
 
 const HomePages = createStackNavigator(
     {
@@ -38,6 +39,9 @@ const HomePages = createStackNavigator(
         },
         JaketPages : {
             screen:JaketPage
+        },
+        SepatuPages : {
+            screen:SepatuPage
         }
     },
     {
