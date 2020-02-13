@@ -10,6 +10,7 @@ import PriaPage from "../../containers/pages/PriaPage";
 import WanitaPage from "../../containers/pages/WanitaPage";
 import AnakPage from "../../containers/pages/AnakPage";
 import MuslimahPage from "../../containers/pages/MuslimahPage";
+import TasPage from "../../containers/pages/TasPage";
 
 const HomePages = createStackNavigator(
     {
@@ -30,6 +31,9 @@ const HomePages = createStackNavigator(
         },
         MuslimahPages : {
             screen : MuslimahPage
+        },
+        TasPages : {
+            screen : TasPage
         }
     },
     {

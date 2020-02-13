@@ -11,7 +11,7 @@ class MenuHome extends Component {
                <MenuItem foto={require('../../../assets/icon/wanita.png')} judul ="WANITA" tekan={() => this.props.navigation.navigate('WanitaPages')} /> 
                <MenuItem foto={require('../../../assets/icon/anak.png')} judul ="ANAK" tekan={() => this.props.navigation.navigate('AnakPages')} /> 
                <MenuItem foto={require('../../../assets/icon/muslimah.png')} judul ="MUSLIMAH" tekan={() => this.props.navigation.navigate('MuslimahPages')} /> 
-               <MenuItem foto={require('../../../assets/icon/tas.png')} judul ="TAS" /> 
+               <MenuItem foto={require('../../../assets/icon/tas.png')} judul ="TAS" tekan={() => this.props.navigation.navigate('TasPages')}  /> 
                <MenuItem foto={require('../../../assets/icon/jaket.png')} judul ="JAKET" /> 
                <MenuItem foto={require('../../../assets/icon/sepatu.png')} judul ="SEPATU" /> 
                <MenuItem foto={require('../../../assets/icon/aksesoris.png')} judul ="AKSESORIS" /> 
