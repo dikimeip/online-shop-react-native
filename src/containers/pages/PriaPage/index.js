@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
 import Navbar from '../../organism/Navbar'
-import HeaderPria from '../../organism/HeaderPria';
 import PriaProduk from '../../organism/PriaProduk'
+import HeaderProduk from '../../organism/HeaderProduk'
 
 
 class PriaPage extends Component {
@@ -19,7 +19,7 @@ class PriaPage extends Component {
         return (
             <View style={{ flex: 1, backgroundColor: '#A8E3A0' }}>
                 {/* headingbar */}
-                <HeaderPria/>
+                <HeaderProduk judul="PRODUK PRIA" />
                 {/* menubar */}
                 <PriaProduk/>
                 {/* navbar  */}
