@@ -14,7 +14,7 @@ class MenuHome extends Component {
                <MenuItem foto={require('../../../assets/icon/tas.png')} judul ="TAS" tekan={() => this.props.navigation.navigate('TasPages')}  /> 
                <MenuItem foto={require('../../../assets/icon/jaket.png')} judul ="JAKET" tekan={() => this.props.navigation.navigate('JaketPages')}  /> 
                <MenuItem foto={require('../../../assets/icon/sepatu.png')} judul ="SEPATU"  tekan={() => this.props.navigation.navigate('SepatuPages')} /> 
-               <MenuItem foto={require('../../../assets/icon/aksesoris.png')} judul ="AKSESORIS" /> 
+               <MenuItem foto={require('../../../assets/icon/aksesoris.png')} judul ="AKSESORIS" tekan={() => this.props.navigation.navigate('AksesorisPages')} /> 
             </View>
         )
     }
