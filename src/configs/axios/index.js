@@ -30,6 +30,8 @@ const GetProdukPria = () => GET_ID('ProdukAll?id=pria')
 const GetProdukWanita = () => GET_ID('ProdukAll?id=wanita')
 const GetProdukAnak = () => GET_ID('ProdukAll?id=anak')
 const GetProdukMuslimah = () => GET_ID('ProdukAll?id=muslimah')
+const GetProdukTas = () => GET_ID('ProdukAll?id=tas')
+
 
 
 const API = {
@@ -39,7 +41,8 @@ const API = {
     GetProdukPria,
     GetProdukWanita,
     GetProdukAnak,
-    GetProdukMuslimah
+    GetProdukMuslimah,
+    GetProdukTas
 }
 
 export default API
