@@ -34,6 +34,8 @@ const GetProdukTas = () => GET_ID('ProdukAll?id=tas')
 const GetProdukJaket = () => GET_ID('ProdukAll?id=jaket')
 const GetProdukSepatu = () => GET_ID('ProdukAll?id=sepatu')
 const GetProdukAksesoris = () => GET_ID('ProdukAll?id=aksesoris')
+const GetProduknew = () => GET_ID('ProdukAll?id=NEWPRODUKALL')
+const GetProdukhot = () => GET_ID('ProdukAll?id=HOTPRODUKALL')
 
 
 
@@ -48,7 +50,9 @@ const API = {
     GetProdukTas,
     GetProdukJaket,
     GetProdukSepatu,
-    GetProdukAksesoris
+    GetProdukAksesoris,
+    GetProduknew,
+    GetProdukhot
 }
 
 export default API
