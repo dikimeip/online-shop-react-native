@@ -11,6 +11,7 @@ import WanitaPage from "../../containers/pages/WanitaPage";
 import AnakPage from "../../containers/pages/AnakPage";
 import MuslimahPage from "../../containers/pages/MuslimahPage";
 import TasPage from "../../containers/pages/TasPage";
+import JaketPage from "../../containers/pages/JaketPage";
 
 const HomePages = createStackNavigator(
     {
@@ -34,6 +35,9 @@ const HomePages = createStackNavigator(
         },
         TasPages : {
             screen : TasPage
+        },
+        JaketPages : {
+            screen:JaketPage
         }
     },
     {
