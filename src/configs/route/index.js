@@ -9,6 +9,7 @@ import ProdukPage from "../../containers/pages/ProdukPage";
 import PriaPage from "../../containers/pages/PriaPage";
 import WanitaPage from "../../containers/pages/WanitaPage";
 import AnakPage from "../../containers/pages/AnakPage";
+import MuslimahPage from "../../containers/pages/MuslimahPage";
 
 const HomePages = createStackNavigator(
     {
@@ -26,6 +27,9 @@ const HomePages = createStackNavigator(
         },
         AnakPages : {
             screen: AnakPage
+        },
+        MuslimahPages : {
+            screen : MuslimahPage
         }
     },
     {
