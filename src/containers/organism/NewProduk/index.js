@@ -33,7 +33,7 @@ class NewProduk extends Component {
             <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, marginVertical: 10, }}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
                     <Text style={{ fontWeight: 'bold', fontSize: 15 }}>NEW PRODUK</Text>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('detailPages')}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('NewProduksPages')}>
                         <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
                     </TouchableOpacity>
                 </View>
