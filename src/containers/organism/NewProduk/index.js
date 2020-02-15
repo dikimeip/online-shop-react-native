@@ -23,9 +23,22 @@ class NewProduk extends Component {
         })
     }
 
+    pindahDetail = (id, nama, harga, deskripsi, stok, foto) => {
+        this.props.navigation.navigate('detailPages', {
+            id: id,
+            nama: nama,
+            harga: harga,
+            deskripsi: deskripsi,
+            stok: stok,
+            foto: foto
+        })
+    }
+
     keyExtractor = (item, index) => index.toString()
     renderItem = ({ item }) => (
-        <ProdukList foto={{ uri: this.state.url + item.image_produk }} judul={item.nama_produk} harga={item.harga} />
+        <ProdukList foto={{ uri: this.state.url + item.image_produk }} judul={item.nama_produk} harga={item.harga}
+        tekan={() => this.pindahDetail(item.id_produk, item.nama_produk, item.harga, item.deskripsi, item.stok, item.image_produk)}
+        />
     )
 
     render() {
