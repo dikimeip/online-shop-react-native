@@ -1,12 +1,28 @@
 import React, { Component } from 'react'
 import { View, Text, ScrollView, TextInput, TouchableOpacity } from 'react-native'
 class DetailProduk extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            count : 1
+            count: 1
         }
     }
+
+    plusCount = () => {
+        console.log('ok')
+        this.setState({
+            count: this.state.count += 1
+        })
+    }
+
+    minusCount = () => {
+        if (this.state.count > 0) {
+            this.setState({
+                count: this.state.count -= 1
+            })
+        }
+    }
+
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -28,16 +44,16 @@ class DetailProduk extends Component {
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </Text>
                     <View style={{ padding: 2, backgroundColor: 'grey', marginVertical: 20 }} ></View>
-                    <View style={{flexDirection:'row',marginHorizontal:20}}>
-                        <TouchableOpacity style={{ height:40, backgroundColor: 'blue', width: '10%',marginRight:-10,justifyContent:'center' }}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white',textAlign:'center' }}>+</Text>
+                    <View style={{ flexDirection: 'row', marginHorizontal: 20 }}>
+                        <TouchableOpacity onPress={() => this.minusCount()} style={{ height: 40, backgroundColor: 'blue', width: '10%', marginRight: -10, justifyContent: 'center' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>-</Text>
                         </TouchableOpacity>
-                        <TextInput value={String(this.state.count)} style={{ backgroundColor: 'white',textAlign:'center', marginHorizontal: 20, borderWidth: 1, width: '20%', height: 40 }} />
-                        <TouchableOpacity  style={{ height:40, backgroundColor: 'blue', width: '10%',marginLeft:-10 ,justifyContent:'center'}}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white',textAlign:'center' }}>-</Text>
+                        <TextInput value={String(this.state.count)} style={{ backgroundColor: 'white', textAlign: 'center', marginHorizontal: 20, borderWidth: 1, width: '20%', height: 40 }} />
+                        <TouchableOpacity onPress={() => this.plusCount()} style={{ height: 40, backgroundColor: 'blue', width: '10%', marginLeft: -10, justifyContent: 'center' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>+</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity  style={{ height:40, backgroundColor: 'blue', width: '50%',marginLeft:20,justifyContent:'center'}}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white',textAlign:'center'}}>PESAN SEKARANG</Text>
+                        <TouchableOpacity style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>PESAN SEKARANG</Text>
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
