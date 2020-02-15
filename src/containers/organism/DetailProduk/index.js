@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import { View, Text, ScrollView, TextInput, TouchableOpacity } from 'react-native'
 class DetailProduk extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            count : 1
+        }
+    }
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -22,11 +28,17 @@ class DetailProduk extends Component {
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </Text>
                     <View style={{ padding: 2, backgroundColor: 'grey', marginVertical: 20 }} ></View>
-                    <View>
-                        <TouchableOpacity style={{padding: 10,backgroundColor:'white'}}>
-                            <Text>+</Text>
+                    <View style={{flexDirection:'row',marginHorizontal:20}}>
+                        <TouchableOpacity style={{ height:40, backgroundColor: 'blue', width: '10%',marginRight:-10,justifyContent:'center' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white',textAlign:'center' }}>+</Text>
                         </TouchableOpacity>
-                        <TextInput keyboardType="number-pad" placeholder="Apa Yang Anda Pikirkan.?" style={{ backgroundColor: 'white', marginHorizontal: 20, borderWidth: 1, borderRadius: 20, width: '90%', height: 40 }} />
+                        <TextInput value={String(this.state.count)} style={{ backgroundColor: 'white',textAlign:'center', marginHorizontal: 20, borderWidth: 1, width: '20%', height: 40 }} />
+                        <TouchableOpacity  style={{ height:40, backgroundColor: 'blue', width: '10%',marginLeft:-10 ,justifyContent:'center'}}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white',textAlign:'center' }}>-</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity  style={{ height:40, backgroundColor: 'blue', width: '50%',marginLeft:20,justifyContent:'center'}}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white',textAlign:'center'}}>PESAN SEKARANG</Text>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
             </View>
