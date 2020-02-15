@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ProdukList from '../../../components/moleculs/ProdukList';
-import { View, Text, ScrollView, FlatList,TouchableOpacity } from 'react-native';
+import { View, Text, FlatList,TouchableOpacity } from 'react-native';
 import API from '../../../configs/axios';
-import {  } from 'react-native-gesture-handler';
 import { withNavigation } from 'react-navigation';
 
 class NewProduk extends Component {
@@ -34,7 +33,7 @@ class NewProduk extends Component {
             <View style={{ height: 300, backgroundColor: 'white', paddingHorizontal: 15, marginVertical: 10, }}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
                     <Text style={{ fontWeight: 'bold', fontSize: 15 }}>NEW PRODUK</Text>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('NewProduksPages')}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('detailPages')}>
                         <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
                     </TouchableOpacity>
                 </View>

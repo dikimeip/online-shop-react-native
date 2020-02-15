@@ -14,9 +14,9 @@ import TasPage from "../../containers/pages/TasPage";
 import JaketPage from "../../containers/pages/JaketPage";
 import SepatuPage from "../../containers/pages/SepatuPage";
 import AksesorisPage from "../../containers/pages/AksesorisPage";
-import NewProduk from "../../containers/organism/NewProduk";
 import NewProduks from "../../containers/pages/NewProduks";
 import HotProduks from "../../containers/pages/HotProduks";
+import DetailPage from "../../containers/pages/DetailPage";
 
 const HomePages = createStackNavigator(
     {
@@ -55,6 +55,9 @@ const HomePages = createStackNavigator(
         },
         hotprodukpage : {
             screen : HotProduks
+        },
+        detailPages : {
+            screen : DetailPage
         }
     },
     {
