@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, ScrollView, TextInput, TouchableOpacity, Image } from 'react-native'
 import { withNavigation } from 'react-navigation'
+import { connect } from 'react-redux'
 class DetailProduk extends Component {
     constructor(props) {
         super(props)
@@ -12,7 +13,7 @@ class DetailProduk extends Component {
             deskripsi: '',
             stok: '',
             foto: '',
-            url: "http://192.168.43.230/server_dc-shop/assets/img/"
+            url: "http://192.168.43.230/server_dc-shop/assets/img/",
         }
     }
 
@@ -66,7 +67,7 @@ class DetailProduk extends Component {
                         <TouchableOpacity onPress={() => this.plusCount()} style={{ height: 40, backgroundColor: 'blue', width: '10%', marginLeft: -10, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>+</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
+                        <TouchableOpacity onPress={()=>this.props.updateCart()} style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>PESAN SEKARANG</Text>
                         </TouchableOpacity>
                     </View>
@@ -76,4 +77,12 @@ class DetailProduk extends Component {
     }
 }
 
-export default withNavigation(DetailProduk) 
+const reduxState = (state) => ({
+    cart : state.cart
+})
+
+const reduxDispatch = (dispatch) => ({
+    updateCart : () => dispatch({type:'ADD_CART',value : this.state})
+})
+
+export default connect(reduxState,reduxDispatch)(withNavigation(DetailProduk))  
