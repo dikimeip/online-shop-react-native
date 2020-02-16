@@ -8,10 +8,15 @@
 
 import React from 'react';
 import Routers from './src/configs/route'
+import { Provider } from 'react-redux';
+import { store } from './src/configs/Redux/Store';
 
 const App  = () => {
   return (
-     <Routers/>
+    <Provider store={store}>
+       <Routers/>
+    </Provider>
+       
   );
 };
 
