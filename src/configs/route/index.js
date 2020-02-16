@@ -58,25 +58,29 @@ const HomePages = createStackNavigator(
         },
         detailPages : {
             screen : DetailPage
-        }
-    },
-    {
-        headerMode:'none',
-        initialRouteName:'dasboard'
-    }
-)
-
-const CartPages = createStackNavigator(
-    {
-        cartPage : {
+        },
+        CartPages : {
             screen:CartPage
         }
     },
     {
         headerMode:'none',
-        initialRouteName:'cartPage'
-    }
+        initialRouteName:'dasboard'
+    },
+    
 )
+
+// const CartPages = createStackNavigator(
+//     {
+//         cartPage : {
+//             screen:CartPage
+//         }
+//     },
+//     {
+//         headerMode:'none',
+//         initialRouteName:'cartPage'
+//     }
+// )
 
 const HistoryPages = createStackNavigator(
     {
@@ -117,7 +121,7 @@ const LoginPages = createStackNavigator(
 const Routers = createSwitchNavigator(
     {
         HomePages,
-        CartPages,
+        //CartPages,
         HistoryPages,
         AccountPages,
         LoginPages

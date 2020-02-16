@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import { View, TextInput, Image, Text } from 'react-native';
+import { View, TextInput, Image, Text, TouchableOpacity } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
 class SearchMenu extends Component {
+    pindahHalaman = () => {
+        this.props.navigation.navigate("CartPages")
+    }
     render() {
         return (
             <View style={{ height: 55, flexDirection: 'row', backgroundColor: 'white' }}>
@@ -9,13 +13,19 @@ class SearchMenu extends Component {
                     <TextInput placeholder="Apa Yang Anda Pikirkan.?" style={{ borderColor: 'grey', borderWidth: 1, borderRadius: 20, position: 'absolute', width: '100%', height: 40 }} />
                     <Image source={require('../../../assets/icon/cari.png')} style={{ position: 'relative', width: 20, height: 20, left: 370, top: 8 }} />
                 </View>
-                <View style={{ width: '15%', marginLeft: 5, }}>
-                    <Image source={require('../../../assets/icon/alert.png')} style={{ width: 35, height: 35, marginTop: 7, position: 'absolute' }} />
-                    <Text style={{ fontWeight: 'bold', color: 'red', position: 'relative', top: 15, left: 13 }}>6</Text>
+
+                <View style={{ width: '14%', marginLeft: 10, }}>
+                    <TouchableOpacity onPress={()=> this.pindahHalaman() }>
+                         <Image source={require('../../../assets/icon/cart.png')} style={{ width: 30, height: 30, marginTop: 8, position: 'absolute' }} />
+                    <Text style={{ fontWeight: 'bold', color: 'yellow', position: 'relative', top: 8, left: 13 }}>0</Text>
+                    </TouchableOpacity>
+                   
                 </View>
+
+
             </View>
         )
     }
 }
 
-export default SearchMenu
+export default withNavigation(SearchMenu) 
