@@ -27,7 +27,6 @@ class SearchMenu extends Component {
 }
 
 const reduxState = (state) => ({
-    cart: state.cart,
     produk : state.produk
 })
 

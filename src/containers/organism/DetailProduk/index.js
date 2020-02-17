@@ -49,12 +49,13 @@ class DetailProduk extends Component {
             id: this.state.id,
             foto: this.state.foto,
             nama: this.state.nama,
-            count: this.state.count
+            count: this.state.count,
+            harga : this.state.harga
         }
 
         this.props.addCart()
         this.props.updateCart(data)
-
+        alert('Produk Sudah Ditambah Ke Cart')
 
     }
 

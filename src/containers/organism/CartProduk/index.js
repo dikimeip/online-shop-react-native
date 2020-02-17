@@ -16,8 +16,10 @@ class CartProduk extends Component {
             <ScrollView>
                 {
                     this.props.produk.map(p => {
+                        const total = p.count * p.harga
+                        console.log("Total Harga",total)
                         return(
-                             <CartList key={Math.random()} foto={{uri:this.state.url + p.foto}} judul={p.nama} jumlah={p.count} harga="100.000" />
+                             <CartList key={Math.random()} foto={{uri:this.state.url + p.foto}} judul={p.nama} jumlah={p.count} harga ={p.harga} total={total} />
                         )
                     })
                 }

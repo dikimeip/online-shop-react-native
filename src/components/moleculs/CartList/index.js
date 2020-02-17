@@ -10,7 +10,8 @@ const CartList = (props) => {
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={{ fontWeight: 'bold', textAlign: 'center', fontSize: 15 }}> {props.judul} </Text>
                 <Text style={{ fontWeight: 'bold', textAlign: 'center', marginTop: 10, }}>JUMLAH PEMBELIAN {props.jumlah} </Text>
-                <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>TOTAL RP {props.harga}</Text>
+                <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>HARGA PRODUK RP {props.harga}</Text>
+                <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>HARGA TOTAL RP {props.total}</Text>
             </View>
             <View style={{ width: 100, justifyContent: 'center', alignItems: 'center' }}>
                 <TouchableOpacity style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>

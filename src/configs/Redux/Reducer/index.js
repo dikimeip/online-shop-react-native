@@ -13,9 +13,15 @@ const reducer = (state = initialState ,action) => {
         //console.log(action.value)
         return {
             produk : [...state.produk,action.value]
+        }
+    }
+
+    if (action.type === "REMOVE_CART") {
+        return {
             
         }
     }
+
     return state
 }
 export default reducer
