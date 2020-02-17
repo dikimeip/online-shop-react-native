@@ -14,7 +14,7 @@ const CartList = (props) => {
                 <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>HARGA TOTAL RP {props.total}</Text>
             </View>
             <View style={{ width: 100, justifyContent: 'center', alignItems: 'center' }}>
-                <TouchableOpacity style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>
+                <TouchableOpacity onPress={props.hapusData} style={{ padding: 10, backgroundColor: 'red', borderRadius: 10 }}>
                     <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold' }}>HAPUS</Text>
                 </TouchableOpacity>
             </View>

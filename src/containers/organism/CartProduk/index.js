@@ -4,22 +4,27 @@ import CartList from '../../../components/moleculs/CartList';
 import { connect } from 'react-redux'
 
 class CartProduk extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             url: "http://192.168.43.230/server_dc-shop/assets/img/"
         }
     }
-    render() {  
-        console.log('Produk Saya ',this.props.produk)
+
+    deleteHanler = (id) => {
+        console.log(id)
+        this.props.removeHandler(id)
+    }
+
+    render() {
+        //console.log('Produk Saya ',this.props.produk[])
         return (
             <ScrollView>
                 {
                     this.props.produk.map(p => {
                         const total = p.count * p.harga
-                        console.log("Total Harga",total)
-                        return(
-                             <CartList key={Math.random()} foto={{uri:this.state.url + p.foto}} judul={p.nama} jumlah={p.count} harga ={p.harga} total={total} />
+                        return (
+                            <CartList key={Math.random()} hapusData={() => this.deleteHanler(p.id)} foto={{ uri: this.state.url + p.foto }} judul={p.nama} jumlah={p.count} harga={p.harga} total={total} />
                         )
                     })
                 }
@@ -41,8 +46,12 @@ class CartProduk extends Component {
     }
 }
 
-const reduxState = (state) => ({
-    produk : state.produk
+const reduxDispatch = (dispatch) => ({
+    removeHandler: (id) => dispatch({ type: "REMOVE_CART", value: id })
 })
 
-export default connect(reduxState)(CartProduk) 
+const reduxState = (state) => ({
+    produk: state.produk
+})
+
+export default connect(reduxState, reduxDispatch)(CartProduk) 
