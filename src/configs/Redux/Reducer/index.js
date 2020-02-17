@@ -17,10 +17,9 @@ const reducer = (state = initialState ,action) => {
     }
 
     if (action.type === "REMOVE_CART") {
-        const indexs = state.produk.findIndex(x => x.id === action.value)
+       // const index = state.produk.findIndex(x => x.id === action.value)
         return {
-            ...state,
-            produk : [state.produk.slice(indexs,0)]
+            produk : []
         }
     }
 

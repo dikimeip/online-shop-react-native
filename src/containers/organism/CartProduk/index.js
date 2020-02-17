@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import { View, ScrollView, TouchableOpacity, Text } from 'react-native';
 import CartList from '../../../components/moleculs/CartList';
 import { connect } from 'react-redux'
@@ -17,16 +17,22 @@ class CartProduk extends Component {
     }
 
     render() {
-        //console.log('Produk Saya ',this.props.produk[])
+        console.log('Produk Saya ', this.props.produk)
         return (
             <ScrollView>
                 {
-                    this.props.produk.map(p => {
-                        const total = p.count * p.harga
-                        return (
-                            <CartList key={Math.random()} hapusData={() => this.deleteHanler(p.id)} foto={{ uri: this.state.url + p.foto }} judul={p.nama} jumlah={p.count} harga={p.harga} total={total} />
-                        )
-                    })
+                    this.props.produk.length > 0 ? (
+                        <Fragment>
+                            {
+                                this.props.produk.map(p => {
+                                    const total = p.count * p.harga
+                                    return (
+                                        <CartList key={Math.random()} hapusData={() => this.deleteHanler(p.id)} foto={{ uri: this.state.url + p.foto }} judul={p.nama} jumlah={p.count} harga={p.harga} total={total} />
+                                    )
+                                })
+                            }
+                        </Fragment>
+                    ) : null
                 }
                 <View style={{ height: 60, backgroundColor: 'white', flexDirection: 'row', marginVertical: 10, }}>
                     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
