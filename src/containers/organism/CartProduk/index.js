@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 import { View, ScrollView, TouchableOpacity, Text } from 'react-native';
 import CartList from '../../../components/moleculs/CartList';
+import { connect } from 'react-redux'
 
 class CartProduk extends Component {
-    render() {
+    constructor(props){
+        super(props)
+        this.state = {
+            url: "http://192.168.43.230/server_dc-shop/assets/img/"
+        }
+    }
+    render() {  
+        console.log('Produk Saya ',this.props.produk)
         return (
             <ScrollView>
-                <CartList foto={require('../../../assets/img/p1.jpg')} judul="BAJU SABLON KUALITAS BISA DIUJI" jumlah="4" harga="100.000" />
-                <CartList foto={require('../../../assets/img/p1.jpg')} judul="BAJU KOKOH SEPERTI SEMEN" jumlah="4" harga="100.000" />
-                <CartList foto={require('../../../assets/img/p1.jpg')} judul="BAJU SABLON KUALITAS BISA DIUJI" jumlah="4" harga="100.000" />
+                {
+                    this.props.produk.map(p => {
+                        return(
+                             <CartList key={p.id} foto={{uri:this.state.url + p.foto}} judul={p.nama} jumlah={p.count} harga="100.000" />
+                        )
+                    })
+                }
                 <View style={{ height: 60, backgroundColor: 'white', flexDirection: 'row', marginVertical: 10, }}>
                     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                         <Text style={{ fontWeight: 'bold', fontSize: 15 }}>TOTAL</Text>
@@ -27,4 +39,8 @@ class CartProduk extends Component {
     }
 }
 
-export default CartProduk
+const reduxState = (state) => ({
+    produk : state.produk
+})
+
+export default connect(reduxState)(CartProduk) 

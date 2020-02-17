@@ -1,7 +1,7 @@
 import { createStackNavigator } from "react-navigation-stack";
 import HomePage from "../../containers/pages/HomePage";
 import CartPage from "../../containers/pages/CartPage";
-import { createSwitchNavigator,createAppContainer } from "react-navigation";
+import { createSwitchNavigator, createAppContainer } from "react-navigation";
 import HistoryPage from "../../containers/pages/HistoryPage";
 import AccountPage from "../../containers/pages/AccountPage";
 import LoginPage from "../../containers/pages/LoginPage";
@@ -20,114 +20,111 @@ import DetailPage from "../../containers/pages/DetailPage";
 
 const HomePages = createStackNavigator(
     {
-        dasboard : {
-            screen : HomePage
+        dasboard: {
+            screen: HomePage
         },
-        produkPages : {
-            screen:ProdukPage
+        produkPages: {
+            screen: ProdukPage
         },
-        PriaPages : {
-            screen : PriaPage
+        PriaPages: {
+            screen: PriaPage
         },
-        WanitaPages : {
-            screen:WanitaPage
+        WanitaPages: {
+            screen: WanitaPage
         },
-        AnakPages : {
+        AnakPages: {
             screen: AnakPage
         },
-        MuslimahPages : {
-            screen : MuslimahPage
+        MuslimahPages: {
+            screen: MuslimahPage
         },
-        TasPages : {
-            screen : TasPage
+        TasPages: {
+            screen: TasPage
         },
-        JaketPages : {
-            screen:JaketPage
+        JaketPages: {
+            screen: JaketPage
         },
-        SepatuPages : {
-            screen:SepatuPage
+        SepatuPages: {
+            screen: SepatuPage
         },
-        AksesorisPages : {
-            screen:AksesorisPage
+        AksesorisPages: {
+            screen: AksesorisPage
         },
-        NewProduksPages : {
-            screen : NewProduks
+        NewProduksPages: {
+            screen: NewProduks
         },
-        hotprodukpage : {
-            screen : HotProduks
+        hotprodukpage: {
+            screen: HotProduks
         },
-        detailPages : {
-            screen : DetailPage
+        detailPages: {
+            screen: DetailPage
         },
-        CartPages : {
-            screen:CartPage
+    },
+    {
+        headerMode: 'none',
+        initialRouteName: 'dasboard'
+    },
+
+)
+
+const CartPages = createStackNavigator(
+    {
+        cartPage: {
+            screen: CartPage
         }
     },
     {
-        headerMode:'none',
-        initialRouteName:'dasboard'
-    },
-    
+        headerMode: 'none',
+        initialRouteName: 'cartPage'
+    }
 )
-
-// const CartPages = createStackNavigator(
-//     {
-//         cartPage : {
-//             screen:CartPage
-//         }
-//     },
-//     {
-//         headerMode:'none',
-//         initialRouteName:'cartPage'
-//     }
-// )
 
 const HistoryPages = createStackNavigator(
     {
-        HomeHistory : {
-            screen : HistoryPage
+        HomeHistory: {
+            screen: HistoryPage
         }
     },
     {
-        headerMode:'none',
-        initialRouteName:'HomeHistory'
+        headerMode: 'none',
+        initialRouteName: 'HomeHistory'
     }
 )
 
 const AccountPages = createStackNavigator(
     {
-        HomeAccount : {
-            screen:AccountPage
+        HomeAccount: {
+            screen: AccountPage
         }
     },
     {
-        headerMode:'none',
-        initialRouteName:'HomeAccount'
+        headerMode: 'none',
+        initialRouteName: 'HomeAccount'
     }
 )
 
 const LoginPages = createStackNavigator(
     {
-        Dasboard:{
-            screen:LoginPage
+        Dasboard: {
+            screen: LoginPage
         }
     },
     {
-        headerMode:'none',
-        initialRouteName:'Dasboard'
+        headerMode: 'none',
+        initialRouteName: 'Dasboard'
     }
 )
 
 const Routers = createSwitchNavigator(
     {
         HomePages,
-        //CartPages,
+        CartPages,
         HistoryPages,
         AccountPages,
         LoginPages
     },
     {
-        initialRouteName:'HomePages'
+        initialRouteName: 'HomePages'
     }
 )
 

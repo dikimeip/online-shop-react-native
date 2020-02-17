@@ -42,6 +42,23 @@ class DetailProduk extends Component {
             })
         }
     }
+  
+    submitHandler = () => {
+        const data = {
+            id : this.state.id,
+            foto : this.state.foto,
+            nama : this.state.nama,
+            count : this.state.count
+        }
+        const datas = [
+            id => this.state.id,
+            foto => this.state.foto,
+            nama => this.state.nama,
+            count => this.state.count
+        ]
+        this.props.addCart()
+        this.props.updateCart(data)
+    }
 
     render() {
         return (
@@ -67,7 +84,7 @@ class DetailProduk extends Component {
                         <TouchableOpacity onPress={() => this.plusCount()} style={{ height: 40, backgroundColor: 'blue', width: '10%', marginLeft: -10, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>+</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={()=>this.props.updateCart()} style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
+                        <TouchableOpacity onPress={()=>this.submitHandler()} style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>PESAN SEKARANG</Text>
                         </TouchableOpacity>
                     </View>
@@ -82,7 +99,9 @@ const reduxState = (state) => ({
 })
 
 const reduxDispatch = (dispatch) => ({
-    updateCart : () => dispatch({type:'ADD_CART',value : this.state})
+    addCart : () => dispatch({type:'ADD_CART'}),
+    updateCart : (data) => dispatch({type:'ADD_PRODUK',value : data})
+
 })
 
 export default connect(reduxState,reduxDispatch)(withNavigation(DetailProduk))  

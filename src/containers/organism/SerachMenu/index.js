@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, TextInput, Image, Text, TouchableOpacity } from 'react-native';
-import { withNavigation } from 'react-navigation';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 class SearchMenu extends Component {
     pindahHalaman = () => {
@@ -16,11 +15,11 @@ class SearchMenu extends Component {
                 </View>
 
                 <View style={{ width: '14%', marginLeft: 10, }}>
-                    <TouchableOpacity onPress={()=> this.pindahHalaman() }>
-                         <Image source={require('../../../assets/icon/cart.png')} style={{ width: 30, height: 30, marginTop: 8, position: 'absolute' }} />
-        <Text style={{ fontWeight: 'bold', color: 'yellow', position: 'relative', top: 8, left: 13 }}>{this.props.cart}</Text>
+                    <TouchableOpacity>
+                        <Image source={require('../../../assets/icon/cart.png')} style={{ width: 30, height: 30, marginTop: 8, position: 'absolute' }} />
+                        <Text style={{ fontWeight: 'bold', color: 'yellow', position: 'relative', top: 8, left: 13 }}>{this.props.cart}</Text>
                     </TouchableOpacity>
-                   
+
                 </View>
 
 
@@ -30,7 +29,7 @@ class SearchMenu extends Component {
 }
 
 const reduxState = (state) => ({
-    cart : state.cart
+    cart: state.cart
 })
 
- export default connect(reduxState)(withNavigation(SearchMenu))
+export default connect(reduxState)(SearchMenu)

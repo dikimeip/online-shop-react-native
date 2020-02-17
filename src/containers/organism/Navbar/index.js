@@ -7,7 +7,7 @@ const Navbar = (props) => {
     return (
         <View style={{ height: 65, backgroundColor: '#D4FFD4', flexDirection: 'row' }}>
             <NavbarItem  foto={require('../../../assets/icon/home.png')} judul="HOME" tekan={() => props.navigation.navigate('HomePages')} />
-            <NavbarItem  foto={require('../../../assets/icon/alert.png')} judul="INVOICE"   />
+            <NavbarItem  foto={require('../../../assets/icon/cart.png')} judul="CART" tekan={() => props.navigation.navigate('CartPages')}   />
             <NavbarItem  foto={require('../../../assets/icon/riwayat.png')} judul="HISTORY" tekan={ () => props.navigation.navigate('HistoryPages')} />
             <NavbarItem  foto={require('../../../assets/icon/account.png')} judul="ACCOUNT" tekan={()=> props.navigation.navigate('produkPages')} />
         </View>
