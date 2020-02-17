@@ -17,7 +17,7 @@ class CartProduk extends Component {
                 {
                     this.props.produk.map(p => {
                         return(
-                             <CartList key={p.id} foto={{uri:this.state.url + p.foto}} judul={p.nama} jumlah={p.count} harga="100.000" />
+                             <CartList key={Math.random()} foto={{uri:this.state.url + p.foto}} judul={p.nama} jumlah={p.count} harga="100.000" />
                         )
                     })
                 }

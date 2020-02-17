@@ -42,22 +42,20 @@ class DetailProduk extends Component {
             })
         }
     }
-  
+
     submitHandler = () => {
+
         const data = {
-            id : this.state.id,
-            foto : this.state.foto,
-            nama : this.state.nama,
-            count : this.state.count
+            id: this.state.id,
+            foto: this.state.foto,
+            nama: this.state.nama,
+            count: this.state.count
         }
-        const datas = [
-            id => this.state.id,
-            foto => this.state.foto,
-            nama => this.state.nama,
-            count => this.state.count
-        ]
+
         this.props.addCart()
         this.props.updateCart(data)
+
+
     }
 
     render() {
@@ -65,12 +63,12 @@ class DetailProduk extends Component {
             <View style={{ flex: 1 }}>
                 <ScrollView>
                     <View style={{ height: 300, backgroundColor: 'red' }}>
-                        <Image source={{uri:this.state.url + this.state.foto}} style={{width:'100%',height:'100%',resizeMode:'stretch'}} />
+                        <Image source={{ uri: this.state.url + this.state.foto }} style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} />
                     </View>
                     <View style={{ margin: 20, }}>
                         <Text style={{ fontSize: 20, fontWeight: 'bold' }}>{this.state.nama} </Text>
                         <Text style={{ fontSize: 20 }}>Rp.{this.state.harga}</Text>
-                        <Text style={{ fontSize: 15, color: 'blue', marginVertical: 10,fontWeight:'bold' }}>STOK : {this.state.stok}</Text>
+                        <Text style={{ fontSize: 15, color: 'blue', marginVertical: 10, fontWeight: 'bold' }}>STOK : {this.state.stok}</Text>
                     </View>
                     <View style={{ padding: 2, backgroundColor: 'grey' }} ></View>
                     <Text style={{ fontSize: 18, fontWeight: 'bold', margin: 20 }}>DESKRIPSI PRODUK</Text>
@@ -84,7 +82,7 @@ class DetailProduk extends Component {
                         <TouchableOpacity onPress={() => this.plusCount()} style={{ height: 40, backgroundColor: 'blue', width: '10%', marginLeft: -10, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>+</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={()=>this.submitHandler()} style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
+                        <TouchableOpacity onPress={() => this.submitHandler()} style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>PESAN SEKARANG</Text>
                         </TouchableOpacity>
                     </View>
@@ -95,13 +93,14 @@ class DetailProduk extends Component {
 }
 
 const reduxState = (state) => ({
-    cart : state.cart
+    cart: state.cart,
+    produk: state.produk
 })
 
 const reduxDispatch = (dispatch) => ({
-    addCart : () => dispatch({type:'ADD_CART'}),
-    updateCart : (data) => dispatch({type:'ADD_PRODUK',value : data})
+    addCart: () => dispatch({ type: 'ADD_CART' }),
+    updateCart: (data) => dispatch({ type: 'ADD_PRODUK', value: data })
 
 })
 
-export default connect(reduxState,reduxDispatch)(withNavigation(DetailProduk))  
+export default connect(reduxState, reduxDispatch)(withNavigation(DetailProduk))  

@@ -7,6 +7,7 @@ class SearchMenu extends Component {
         this.props.navigation.navigate("CartPages")
     }
     render() {
+        console.log(this.props.produk.length)
         return (
             <View style={{ height: 55, flexDirection: 'row', backgroundColor: 'white' }}>
                 <View style={{ width: '85%', marginVertical: 5, marginLeft: 15 }}>
@@ -15,11 +16,8 @@ class SearchMenu extends Component {
                 </View>
 
                 <View style={{ width: '14%', marginLeft: 10, }}>
-                    <TouchableOpacity>
                         <Image source={require('../../../assets/icon/cart.png')} style={{ width: 30, height: 30, marginTop: 8, position: 'absolute' }} />
-                        <Text style={{ fontWeight: 'bold', color: 'yellow', position: 'relative', top: 8, left: 13 }}>{this.props.cart}</Text>
-                    </TouchableOpacity>
-
+                        <Text style={{ fontWeight: 'bold', color: 'yellow', position: 'relative', top: 8, left: 13 }}>{this.props.produk.length}</Text>
                 </View>
 
 
@@ -29,7 +27,8 @@ class SearchMenu extends Component {
 }
 
 const reduxState = (state) => ({
-    cart: state.cart
+    cart: state.cart,
+    produk : state.produk
 })
 
 export default connect(reduxState)(SearchMenu)
