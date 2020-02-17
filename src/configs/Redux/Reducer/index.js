@@ -17,9 +17,10 @@ const reducer = (state = initialState ,action) => {
     }
 
     if (action.type === "REMOVE_CART") {
-       // const index = state.produk.findIndex(x => x.id === action.value)
+        const index = state.produk.findIndex(x => x.id === action.value)
         return {
-            produk : []
+            ...state,
+            produk : state.produk.filter(m => m.id !== action.value)
         }
     }
 
