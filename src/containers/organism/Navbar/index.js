@@ -9,7 +9,7 @@ const Navbar = (props) => {
             <NavbarItem  foto={require('../../../assets/icon/home.png')} judul="HOME" tekan={() => props.navigation.navigate('HomePages')} />
             <NavbarItem  foto={require('../../../assets/icon/cart.png')} judul="CART" tekan={() => props.navigation.navigate('CartPages')}   />
             <NavbarItem  foto={require('../../../assets/icon/riwayat.png')} judul="HISTORY" tekan={ () => props.navigation.navigate('HistoryPages')} />
-            <NavbarItem  foto={require('../../../assets/icon/account.png')} judul="ACCOUNT" tekan={()=> props.navigation.navigate('produkPages')} />
+            <NavbarItem  foto={require('../../../assets/icon/account.png')} judul="ACCOUNT" tekan={()=> props.navigation.navigate('AccountPages')} />
         </View>
     ) 
 }

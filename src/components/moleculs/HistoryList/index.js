@@ -8,7 +8,7 @@ const HistoryList = (props) => {
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={{ fontSize: 15 }}>{props.judul}</Text>
                 <Text style={{ fontSize: 15 }}>Rp {props.harga}</Text>
-                <Text style={{ fontSize: 15 }}>INVOICE {props.invoice}</Text>
+                <Text style={{ fontSize: 15,textAlign:'center' }}>INVOICE {props.invoice}</Text>
             </View>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={{ fontSize: 15 }}>{props.ket}</Text>

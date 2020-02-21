@@ -24,6 +24,13 @@ const reducer = (state = initialState ,action) => {
         }
     }
 
+    if (action.type === "REMOVE_ALL") {
+        return {
+            ...state,
+            produk : []
+        }
+    }
+
     return state
 }
 export default reducer

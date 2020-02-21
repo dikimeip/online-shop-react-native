@@ -31,7 +31,7 @@ class NewProduk extends Component {
             deskripsi: deskripsi,
             stok: stok,
             foto: foto
-        })
+        }) 
     }
 
     keyExtractor = (item, index) => index.toString()

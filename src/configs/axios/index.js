@@ -23,7 +23,19 @@ const GET_ID = (path) => {
     return promise
 }
 
+const GET_ID_VAL = (path,data) => {
+    const promise = new Promise((resolve,reject) => {
+        Axios.get(RootPath+path+data).then(res => {
+            resolve(res.data)
+        }).catch(er => {
+            reject(er)
+        })
+    })
+    return promise
+}
+
 const PostLogin = (data) => POST('LoginController',data)
+const PostPemesanan = (data) => POST('PemesananController',data)
 const GetHotProduk = () => GET_ID('ProdukAll?id=HOTPRODUK')
 const GetAllProduk = () => GET_ID('ProdukAll?id=NEWPRODUK')
 const GetProdukPria = () => GET_ID('ProdukAll?id=pria')
@@ -36,8 +48,8 @@ const GetProdukSepatu = () => GET_ID('ProdukAll?id=sepatu')
 const GetProdukAksesoris = () => GET_ID('ProdukAll?id=aksesoris')
 const GetProduknew = () => GET_ID('ProdukAll?id=NEWPRODUKALL')
 const GetProdukhot = () => GET_ID('ProdukAll?id=HOTPRODUKALL')
-
-
+const GetPemesananId = (data) => GET_ID_VAL('PemesananController?id='+data)
+const GetUserId = (data) => GET_ID_VAL('UserController?id='+data)
 
 const API = {
     PostLogin,
@@ -52,7 +64,10 @@ const API = {
     GetProdukSepatu,
     GetProdukAksesoris,
     GetProduknew,
-    GetProdukhot
+    GetProdukhot,
+    PostPemesanan,
+    GetPemesananId,
+    GetUserId,
 }
 
 export default API

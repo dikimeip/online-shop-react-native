@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { View, TextInput, Text, TouchableOpacity } from 'react-native'
 import API from '../../../configs/axios'
 import Loading from 'react-native-whc-loading'
+import AsyncStorage from '@react-native-community/async-storage';
+
 
 class LoginPage extends Component {
     constructor(props) {
@@ -12,11 +14,20 @@ class LoginPage extends Component {
         }
     }
 
+    storageData = async (id) => {
+        try {
+            await AsyncStorage.setItem('user',id)
+        } catch (er) {
+            console.log(er)
+        }
+    }
+
     login = () => {
         this.refs.loading.show();
         setTimeout(() => {
             API.PostLogin(this.state).then(res => {
                 if (res.status === 1) {
+                    this.storageData(res.value.id_user)
                     this.refs.loading.close();
                     this.props.navigation.navigate('HomePages')
                 } else {
@@ -27,7 +38,7 @@ class LoginPage extends Component {
                 this.refs.loading.close();
                 alert(err)
             })
-        }, 1000);
+        });
     }
 
 

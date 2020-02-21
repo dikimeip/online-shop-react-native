@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { View, Text, ScrollView, TextInput, TouchableOpacity, Image } from 'react-native'
+import { View, Text, ScrollView, TextInput, TouchableOpacity, Image ,FlatList} from 'react-native'
 import { withNavigation } from 'react-navigation'
 import { connect } from 'react-redux'
+import API from '../../../configs/axios'
+import ProdukList from '../../../components/moleculs/ProdukList'
 class DetailProduk extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            produk: [],
             count: 1,
             id: '',
             nama: '',
@@ -25,6 +28,14 @@ class DetailProduk extends Component {
             deskripsi: this.props.navigation.state.params.deskripsi,
             stok: this.props.navigation.state.params.stok,
             foto: this.props.navigation.state.params.foto,
+        })
+
+        API.GetAllProduk().then(res => {
+            this.setState({
+                produk: res.value
+            })
+        }).catch(err => {
+            console.log(err)
         })
     }
 
@@ -50,7 +61,7 @@ class DetailProduk extends Component {
             foto: this.state.foto,
             nama: this.state.nama,
             count: this.state.count,
-            harga : this.state.harga
+            harga: this.state.harga
         }
 
         this.props.addCart()
@@ -58,6 +69,24 @@ class DetailProduk extends Component {
         alert('Produk Sudah Ditambah Ke Cart')
 
     }
+
+    pindahDetail = (id, nama, harga, deskripsi, stok, foto) => {
+        this.props.navigation.navigate('NewProduksPages', {
+            id: id,
+            nama: nama,
+            harga: harga,
+            deskripsi: deskripsi,
+            stok: stok,
+            foto: foto
+        }) 
+    }
+
+    keyExtractor = (item, index) => index.toString()
+    renderItem = ({ item }) => (
+        <ProdukList foto={{ uri: this.state.url + item.image_produk }} judul={item.nama_produk} harga={item.harga}
+            tekan={() => this.pindahDetail(item.id_produk, item.nama_produk, item.harga, item.deskripsi, item.stok, item.image_produk)}
+        />
+    )
 
     render() {
         return (
@@ -86,6 +115,23 @@ class DetailProduk extends Component {
                         <TouchableOpacity onPress={() => this.submitHandler()} style={{ height: 40, backgroundColor: 'blue', width: '50%', marginLeft: 20, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', textAlign: 'center' }}>PESAN SEKARANG</Text>
                         </TouchableOpacity>
+                    </View>
+                    {/* all produk  */}
+                    <View style={{ height: 300,marginTop:40, backgroundColor: '#A8E3A0', paddingHorizontal: 15, marginVertical: 10, }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>PRODUK LAINYA</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('NewProduksPages')}>
+                                <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'green' }}>LIHAT SEMUA</Text>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ height: '85%', marginTop: 10, flexDirection: 'row' }}>
+                            <FlatList
+                                horizontal={true}
+                                data={this.state.produk}
+                                keyExtractor={this.keyExtractor}
+                                renderItem={this.renderItem}
+                            />
+                        </View>
                     </View>
                 </ScrollView>
             </View>

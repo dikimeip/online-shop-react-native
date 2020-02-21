@@ -7,9 +7,11 @@ import ProdukSale from '../../organism/ProdukSale'
 import HotProduk from '../../organism/HotProduk'
 import NewProduk from '../../organism/NewProduk'
 import Navbar from '../../organism/Navbar'
+import {} from 'react-navigation'
 
 class HomePage extends Component {
     render() {
+        
         return (
             <View style={{ flex: 1 }}>
                 <ScrollView>
