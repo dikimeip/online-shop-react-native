@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import SearchMenu from '../../organism/SerachMenu'
 import ImageSlider from '../../organism/ImageSlider'
 import MenuHome from '../../organism/MenuHome'
@@ -7,13 +7,12 @@ import ProdukSale from '../../organism/ProdukSale'
 import HotProduk from '../../organism/HotProduk'
 import NewProduk from '../../organism/NewProduk'
 import Navbar from '../../organism/Navbar'
-import {} from 'react-navigation'
 
 class HomePage extends Component {
     render() {
-        
         return (
             <View style={{ flex: 1 }}>
+               
                 <ScrollView>
                     {/* header  */}
                     <SearchMenu />
@@ -37,5 +36,6 @@ class HomePage extends Component {
         )
     }
 }
+
 
 export default HomePage
