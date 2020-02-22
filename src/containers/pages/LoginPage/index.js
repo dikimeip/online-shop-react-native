@@ -38,6 +38,8 @@ class LoginPage extends Component {
             if (this.state.id !== "") {
                 this.refs.loading.close()
                 this.props.navigation.navigate('HomePages')
+            } else{
+                this.refs.loading.close()
             }
         }, 100);
     }
@@ -84,7 +86,7 @@ class LoginPage extends Component {
                     <TouchableOpacity onPress={this.login} style={{ padding: 20, backgroundColor: 'blue', borderRadius: 15, marginTop: 20, }}>
                         <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 20, textAlign: 'center' }}>LOGIN</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ padding: 20, backgroundColor: 'green', borderRadius: 15, marginTop: 20, }}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Register') } style={{ padding: 20, backgroundColor: 'green', borderRadius: 15, marginTop: 20, }}>
                         <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 20, textAlign: 'center' }}>REGISTER</Text>
                     </TouchableOpacity>
                 </View>

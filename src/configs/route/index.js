@@ -17,6 +17,7 @@ import AksesorisPage from "../../containers/pages/AksesorisPage";
 import NewProduks from "../../containers/pages/NewProduks";
 import HotProduks from "../../containers/pages/HotProduks";
 import DetailPage from "../../containers/pages/DetailPage";
+import RegisterPage from "../../containers/pages/RegisterPage";
 
 const HomePages = createStackNavigator(
     {
@@ -107,6 +108,9 @@ const LoginPages = createStackNavigator(
     {
         Dasboard: {
             screen: LoginPage
+        },
+        Register : {
+            screen:RegisterPage
         }
     },
     {
@@ -124,7 +128,7 @@ const Routers = createSwitchNavigator(
         LoginPages
     },
     {
-        initialRouteName: 'HomePages'
+        initialRouteName: 'LoginPages'
     }
 )
 

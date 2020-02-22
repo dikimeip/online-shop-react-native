@@ -36,6 +36,7 @@ const GET_ID_VAL = (path,data) => {
 
 const PostLogin = (data) => POST('LoginController',data)
 const PostPemesanan = (data) => POST('PemesananController',data)
+const PostRegister = (data) => POST('UserController',data)
 const GetHotProduk = () => GET_ID('ProdukAll?id=HOTPRODUK')
 const GetAllProduk = () => GET_ID('ProdukAll?id=NEWPRODUK')
 const GetProdukPria = () => GET_ID('ProdukAll?id=pria')
@@ -68,6 +69,7 @@ const API = {
     PostPemesanan,
     GetPemesananId,
     GetUserId,
+    PostRegister, 
 }
 
 export default API
