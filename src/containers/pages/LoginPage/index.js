@@ -9,14 +9,42 @@ class LoginPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            id: "",
             username: "",
             password: ""
         }
     }
 
+    getData = async () => {
+        try {
+            const myId = await AsyncStorage.getItem('user');
+            if (myId !== null) {
+                console.log("My Id " + myId)
+                this.setState({
+                    id: myId
+                })
+            } else {
+                console.log('Id Kosong')
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    componentDidMount = () => {
+        this.getData()
+        this.refs.loading.show()
+        setTimeout(() => {
+            if (this.state.id !== "") {
+                this.refs.loading.close()
+                this.props.navigation.navigate('HomePages')
+            }
+        }, 100);
+    }
+
     storageData = async (id) => {
         try {
-            await AsyncStorage.setItem('user',id)
+            await AsyncStorage.setItem('user', id)
         } catch (er) {
             console.log(er)
         }
