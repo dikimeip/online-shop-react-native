@@ -37,30 +37,33 @@ class CartProduk extends Component {
     }
 
     simpanPemesanan = () => {
-        if (this.props.produk.length === 0) {
-            alert("Keranjang Kosong,Silahkan Berbelanja .")
+        if (this.state.id_user !== "") {
+            if (this.props.produk.length === 0) {
+                alert("Keranjang Kosong,Silahkan Berbelanja .")
+            } else {
+                this.refs.loading.show()
+                this.props.produk.map(m => {
+                    const data = {
+                        id_produk: m.id,
+                        id_user: this.state.id_user,
+                        jumlah: m.count,
+                        total: m.harga,
+                        invoice: "PS" + m.id + Math.random()
+                    }
+                    setTimeout(() => {
+                        API.PostPemesanan(data).then(res => {
+                            this.props.removeAll()
+                            alert('Silahkan Menunggu Konfirmasi Pembayaran Dari Admin')
+                            this.refs.loading.close()
+                        }).catch(er => {
+                            console.log(er)
+                            this.refs.loading.close()
+                        })
+                    }, 0);
+                })
+            }
         } else {
-            this.refs.loading.show()
-            this.props.produk.map(m => {
-                const data = {
-                    id_produk: m.id,
-                    id_user: this.state.id_user,
-                    jumlah: m.count,
-                    total: m.harga,
-                    invoice: "PS" +m.id+Math.random()
-                }
-                setTimeout(() => {
-                    API.PostPemesanan(data).then(res => {
-                        this.props.removeAll()
-                        alert('Silahkan Menunggu Konfirmasi Pembayaran Dari Admin')
-                        this.refs.loading.close()
-                    }).catch(er => {
-                        console.log(er)
-                        this.refs.loading.close()
-                    })
-                }, 0);
-
-            })
+            this.props.navigation.navigate('LoginPages')
         }
     }
 

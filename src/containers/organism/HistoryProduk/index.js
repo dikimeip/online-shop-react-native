@@ -4,6 +4,7 @@ import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import API from '../../../configs/axios';
 import AsyncStorage from '@react-native-community/async-storage';
 import Loading from 'react-native-whc-loading';
+import { withNavigation } from 'react-navigation';
 
 
 class HistoryProduk extends Component {
@@ -11,7 +12,7 @@ class HistoryProduk extends Component {
         super(props)
         this.state = {
             produk: [],
-            id: 0
+            id: ""
         }
     }
 
@@ -35,17 +36,23 @@ class HistoryProduk extends Component {
         this.getData()
         this.refs.loading.show()
         setTimeout(() => {
-            API.GetPemesananId(this.state.id).then(res => {
-                this.setState({
-                    produk: res.value
+            if (this.state.id !== "") {
+                API.GetPemesananId(this.state.id).then(res => {
+                    this.setState({
+                        produk: res.value
+                    })
+                    console.log(res)
+                    this.refs.loading.close()
+                }).then(err => {
+                    console.log(err)
+                    this.refs.loading.close()
                 })
-                console.log(res)
-                this.refs.loading.close()
-            }).then(err => {
-                console.log(err)
-                this.refs.loading.close()
-            })
+            } else {
+                this.props.navigation.navigate('LoginPages')
+
+            }
         }, 100);
+
 
     }
 
@@ -59,10 +66,10 @@ class HistoryProduk extends Component {
             <ScrollView>
                 {Produks}
                 <Loading ref="loading" />
-               
+
             </ScrollView>
         )
     }
 }
 
-export default HistoryProduk
+export default withNavigation(HistoryProduk) 
