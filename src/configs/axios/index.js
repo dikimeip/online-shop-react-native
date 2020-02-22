@@ -51,6 +51,8 @@ const GetProduknew = () => GET_ID('ProdukAll?id=NEWPRODUKALL')
 const GetProdukhot = () => GET_ID('ProdukAll?id=HOTPRODUKALL')
 const GetPemesananId = (data) => GET_ID_VAL('PemesananController?id='+data)
 const GetUserId = (data) => GET_ID_VAL('UserController?id='+data)
+const cariProduk = (data) => GET_ID_VAL('LoginController?id='+data)
+
 
 const API = {
     PostLogin,
@@ -70,6 +72,7 @@ const API = {
     GetPemesananId,
     GetUserId,
     PostRegister, 
+    cariProduk
 }
 
 export default API

@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 class SearchMenu extends Component {
     pindahHalaman = () => {
         this.props.navigation.navigate("CartPages")
-    }
+    } 
     render() {
         console.log(this.props.produk.length)
         return (
